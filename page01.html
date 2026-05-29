@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>教育部学籍在线验证报告</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="phone">
+    <header class="site-header">
+      <div class="brand">
+        <img class="brand-logo" src="42d69ab4632cab66fccb303a8e99b7e5.png" alt="" />
+        <span class="brand-text">学信网</span>
+        <span class="brand-divider"></span>
+        <span class="brand-sub">在线验证</span>
+      </div>
+      <div class="site-actions">
+        <button class="search-btn" aria-label="搜索"></button>
+        <button class="menu-btn" aria-label="菜单"></button>
+      </div>
+    </header>
+
+    <section class="language-row" aria-label="语种选择">
+      <span>报告语种</span>
+      <button class="active">中文</button>
+      <button>英文</button>
+      <button class="download" aria-label="下载">
+        <img src="fe3a049f1cabc69ec1c8687a96d67575.png" alt="" />
+      </button>
+    </section>
+
+    <section class="report" aria-label="在线验证报告">
+      <h1>教育部学籍在线验证报告</h1>
+
+      <label class="photo-box" for="photoInput">
+        <img id="photoImg" src="photo-placeholder.svg" alt="照片占位" />
+        <span class="visually-hidden">头像，点击可更换</span>
+      </label>
+      <input id="photoInput" class="visually-hidden" type="file" accept="image/*" />
+
+      <div class="info-list">
+        <div class="info-row"><div class="label">姓名</div><div class="value" contenteditable="true" data-key="name">贺萱</div></div>
+        <div class="info-row"><div class="label">性别</div><div class="value" contenteditable="true" data-key="gender">女</div></div>
+        <div class="info-row"><div class="label">出生日期</div><div class="value" contenteditable="true" data-key="birth">2001年01月01日</div></div>
+        <div class="info-row"><div class="label">民族</div><div class="value" contenteditable="true" data-key="nation">汉族</div></div>
+        <div class="info-row"><div class="label">学校名称</div><div class="value" contenteditable="true" data-key="school">暨南大学</div></div>
+        <div class="info-row"><div class="label">层次</div><div class="value" contenteditable="true" data-key="level">硕士研究生</div></div>
+        <div class="info-row"><div class="label">专业</div><div class="value" contenteditable="true" data-key="major">光学工程</div></div>
+        <div class="info-row"><div class="label">学制</div><div class="value" contenteditable="true" data-key="length">3 年</div></div>
+        <div class="info-row"><div class="label">学历类别</div><div class="value" contenteditable="true" data-key="degreeType">普通高等教育</div></div>
+        <div class="info-row"><div class="label">学习形式</div><div class="value" contenteditable="true" data-key="mode">全日制</div></div>
+        <div class="info-row"><div class="label">分院</div><div class="value" contenteditable="true" data-key="college">理工学院</div></div>
+        <div class="info-row"><div class="label">系所</div><div class="value" contenteditable="true" data-key="dept"></div></div>
+        <div class="info-row"><div class="label">入学日期</div><div class="value" contenteditable="true" data-key="enroll">2023年08月29日</div></div>
+        <div class="info-row"><div class="label">学籍状态</div><div class="value" contenteditable="true" data-key="status">在籍（注册学籍）</div></div>
+        <div class="info-row"><div class="label">预计毕业日期</div><div class="value" contenteditable="true" data-key="grad">2026年06月30日</div></div>
+        <div class="info-row"><div class="label">在线验证码</div><div class="value code" contenteditable="true" data-key="code">A3LC7U8S77HG4WND</div></div>
+        <div class="info-row"><div class="label">更新日期</div><div class="value" contenteditable="true" data-key="update">2026年03月03日</div></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>主办单位：教育部学生服务与素质发展中心</div>
+      <div>Copyright © 2003-2026 学信网 All Rights Reserved</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

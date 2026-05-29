@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>页面列表</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background: #f5f6f7;
+      color: #1f2a2e;
+    }
+    main {
+      width: min(100vw, 430px);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 22px;
+    }
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid #e8eaed;
+      color: inherit;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a::after {
+      content: ">";
+      color: #8d949b;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>10 份独立页面</h1>
+    <div class="list">
+      <a href="page01.html">第 01 份</a>
+      <a href="page02.html">第 02 份</a>
+      <a href="page03.html">第 03 份</a>
+      <a href="page04.html">第 04 份</a>
+      <a href="page05.html">第 05 份</a>
+      <a href="page06.html">第 06 份</a>
+      <a href="page07.html">第 07 份</a>
+      <a href="page08.html">第 08 份</a>
+      <a href="page09.html">第 09 份</a>
+      <a href="page10.html">第 10 份</a>
+    </div>
+  </main>
+</body>
+</html>

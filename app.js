@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const storageKey = "xunxin-editable-template-v3";
+  const pageId = document.body.dataset.pageId || location.pathname.split("/").pop() || "index";
+  const storageKey = `xunxin-editable-template-v3:${pageId}`;
   const emptyMarker = document.documentElement.dataset.emptyMarker || "\u8bf7\u586b\u5199";
   const photoInput = document.getElementById("photoInput");
   const photoImg = document.getElementById("photoImg");
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(storageKey, JSON.stringify(collectData()));
     } catch (error) {
-      console.warn("保存失败", error);
+      console.warn("save failed", error);
     }
   }
 
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         photoImg.src = data.photo;
       }
     } catch (error) {
-      console.warn("读取失败", error);
+      console.warn("load failed", error);
     }
   }
 
