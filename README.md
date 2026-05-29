@@ -12,6 +12,12 @@
 ## 文件
 
 - `index.html`：页面结构
+- `page01.html` - `page10.html`：10 份独立页面
+- `data/page01.json` - `data/page10.json`：10 份独立默认数据
 - `style.css`：移动端样式
 - `app.js`：字段保存和照片上传
 - `photo-placeholder.svg`：默认照片占位图
+
+## 修改 10 份默认内容
+
+编辑 `data/page01.json` 到 `data/page10.json` 中对应字段，提交并推送后，别人打开对应页面会看到新的默认内容。

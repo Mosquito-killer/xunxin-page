@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const pageId = document.body.dataset.pageId || location.pathname.split("/").pop() || "index";
+  const pageId = document.body.dataset.pageId || location.pathname.split("/").pop().replace(/\.html$/i, "") || "index";
   const storageKey = `xunxin-editable-template-v3:${pageId}`;
   const emptyMarker = document.documentElement.dataset.emptyMarker || "\u8bf7\u586b\u5199";
   const photoInput = document.getElementById("photoInput");
@@ -41,6 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  async function loadDefaultData() {
+    try {
+      const response = await fetch(`data/${pageId}.json`, { cache: "no-store" });
+      if (!response.ok) return;
+
+      const data = await response.json();
+      editableFields.forEach((field) => {
+        const value = data[field.dataset.key];
+        if (typeof value === "string") field.textContent = value;
+      });
+      if (typeof data.photo === "string" && data.photo) {
+        photoImg.src = data.photo;
+      }
+    } catch (error) {
+      console.warn("default data load failed", error);
+    }
+  }
+
   let saveTimer = 0;
 
   editableFields.forEach((field) => {
@@ -75,5 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   });
 
-  loadData();
+  loadDefaultData().then(loadData);
 });
